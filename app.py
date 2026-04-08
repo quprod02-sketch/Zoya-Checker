@@ -18,6 +18,7 @@ def check_ticker_api(ticker):
        if response.status_code != 200:
            return "Error"
        data = response.json()
+      st.write(data)
        # Adjust based on actual API structure
        status = data.get("compliance", "unknown").lower()
        if "not" in status:
